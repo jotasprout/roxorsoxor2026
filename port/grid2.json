@@ -4,7 +4,7 @@
     "title": "Design Project",
     "description": "Clean design sample",
     "tags": ["design"],
-    "thumb": "https://via.placeholder.com/300x200",
+    "thumb": "../portfolio/ph-350x350.png",
     "media": "<img src='https://via.placeholder.com/800x400'>",
     "modalTitle": "Design Project",
     "modalDesc": "Detailed design"
