@@ -14,7 +14,7 @@
     "title": "History of Little Caesars",
     "description": "Video sample",
     "tags": ["video"],
-    "thumb": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg'>",
+    "thumb": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg",
     "media": "<iframe src='https://youtu.be/_ammPSECWiw' allowfullscreen></iframe>",
     "modalTitle": "YouTube Video",
     "modalDesc": "YouTube embed"
