@@ -1,0 +1,32 @@
+[
+  {
+    "id": "design1",
+    "title": "Design Project",
+    "description": "Clean design sample",
+    "tags": ["design"],
+    "thumb": "https://via.placeholder.com/300x200",
+    "media": "<img src='https://via.placeholder.com/800x400'>",
+    "modalTitle": "Design Project",
+    "modalDesc": "Detailed design"
+  },
+  {
+    "id": "video1",
+    "title": "YouTube Video",
+    "description": "Video sample",
+    "tags": ["video"],
+    "thumb": "https://via.placeholder.com/300x200",
+    "media": "<iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ' allowfullscreen></iframe>",
+    "modalTitle": "YouTube Video",
+    "modalDesc": "YouTube embed"
+  },
+  {
+    "id": "insta1",
+    "title": "Instagram Post",
+    "description": "Instagram example",
+    "tags": ["social"],
+    "thumb": "https://via.placeholder.com/300x200",
+    "media": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/CgZ6Y8zv1yH/'></blockquote>",
+    "modalTitle": "Instagram",
+    "modalDesc": "Instagram embed"
+  }
+]

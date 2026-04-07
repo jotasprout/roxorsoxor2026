@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Portfolio</title>
+
+<style>
+body { font-family: Arial, sans-serif; margin:0; background:#f5f5f5; }
+
+.filters { padding:1rem; text-align:center; }
+.filters button { margin:0.25rem; padding:0.5rem 1rem; cursor:pointer; }
+
+.grid {
+  column-count: 4;
+  column-gap: 1rem;
+  padding:1rem;
+}
+
+.card {
+  background:white;
+  border-radius:12px;
+  margin-bottom:1rem;
+  display:inline-block;
+  width:100%;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transform:translateY(10px);
+  opacity:0;
+  animation:fadeInUp 0.5s forwards;
+}
+
+.card.hide { opacity:0.2; transform:scale(0.95); }
+
+.card:hover { transform:translateY(-5px); }
+
+@keyframes fadeInUp {
+  to { opacity:1; transform:translateY(0); }
+}
+
+.thumb img { width:100%; }
+.content { padding:0.5rem 1rem; }
+.tags { padding:0.5rem; }
+.tag { background:#ddd; padding:0.25rem 0.5rem; margin:0.2rem; border-radius:5px; cursor:pointer; }
+
+/* Modal */
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:opacity 0.3s;
+}
+.modal.show { display:flex; opacity:1; }
+
+.modal-content {
+  background:white;
+  width:80%; max-width:900px;
+  border-radius:12px;
+  overflow:hidden;
+  transform:scale(0.9);
+  transition:transform 0.3s;
+  position:relative;
+}
+.modal.show .modal-content { transform:scale(1); }
+
+.modal-media img,
+.modal-media iframe,
+.modal-media video { width:100%; max-height:400px; }
+
+.modal-text { padding:1rem; }
+.close { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; }
+
+@media(max-width:900px){ .grid{column-count:2;} }
+@media(max-width:500px){ .grid{column-count:1;} }
+</style>
+</head>
+<body>
+
+<div class="filters" id="filters"></div>
+<div class="grid" id="portfolio"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-text">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+</div>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+<script>
+let portfolioData = [];
+let activeFilters = [];
+let currentIndex = 0;
+
+// LOAD STATIC JSON
+fetch('portfolio.json')
+  .then(res => res.json())
+  .then(data => {
+    portfolioData = data;
+    renderFilters();
+    renderPortfolio();
+    initFromURL();
+  });
+
+function createCard(item, index) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.tags = item.tags.join(',');
+
+  card.innerHTML = `
+    <div class="thumb"><img loading="lazy" src="${item.thumb}"></div>
+    <div class="content"><h3>${item.title}</h3><p>${item.description}</p></div>
+    <div class="tags">
+      ${item.tags.map(tag=>`<span class="tag" onclick="event.stopPropagation();toggleFilter('${tag}')">${tag}</span>`).join('')}
+    </div>
+  `;
+
+  card.onclick = ()=>openModal(index);
+  return card;
+}
+
+function renderPortfolio() {
+  const container = document.getElementById('portfolio');
+  container.innerHTML='';
+
+  portfolioData.forEach((item,i)=>{
+    if(activeFilters.length===0 || activeFilters.some(f=>item.tags.includes(f))){
+      container.appendChild(createCard(item,i));
+    }
+  });
+}
+
+function renderFilters() {
+  const tags=[...new Set(portfolioData.flatMap(i=>i.tags))];
+  const el=document.getElementById('filters');
+
+  el.innerHTML = tags.map(t=>
+    `<button onclick="toggleFilter('${t}')">${t}</button>`
+  ).join('');
+}
+
+function toggleFilter(tag) {
+  if(activeFilters.includes(tag)) {
+    activeFilters = activeFilters.filter(t=>t!==tag);
+  } else {
+    activeFilters.push(tag);
+  }
+  renderPortfolio();
+}
+
+// MODAL + NAVIGATION
+function openModal(index) {
+  currentIndex = index;
+  const item = portfolioData[index];
+
+  document.getElementById('modal-media').innerHTML=item.media;
+  document.getElementById('modal-title').textContent=item.modalTitle;
+  document.getElementById('modal-desc').textContent=item.modalDesc;
+
+  document.getElementById('modal').classList.add('show');
+  history.pushState({},'',`#item=${item.id}`);
+
+  if(window.instgrm) window.instgrm.Embeds.process();
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('show');
+  history.pushState({},'',window.location.pathname);
+}
+
+// KEYBOARD NAV
+window.addEventListener('keydown', (e)=>{
+  if(!document.getElementById('modal').classList.contains('show')) return;
+
+  if(e.key === 'Escape') closeModal();
+  if(e.key === 'ArrowRight') openModal((currentIndex+1)%portfolioData.length);
+  if(e.key === 'ArrowLeft') openModal((currentIndex-1+portfolioData.length)%portfolioData.length);
+});
+
+// URL INIT
+function initFromURL() {
+  const hash=location.hash;
+  if(hash.startsWith('#item=')){
+    const id=hash.split('=')[1];
+    const index=portfolioData.findIndex(i=>i.id===id);
+    if(index>=0) openModal(index);
+  }
+}
+</script>
+
+</body>
+</html>
