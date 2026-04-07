@@ -1,32 +1,94 @@
 [
   {
     "id": "ntmo_v7",
-    "title": "Word Export from Storyline",
-    "description": "No voice-over script included, dirty layers",
-    "tags": ["storyline"],
+    "title": "New Team Member Onboarding",
+    "description": "Word Export from Storyline. No voice-over script included, dirty layers",
+    "tags": ["Storyline"],
     "thumb": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg",
-    "media": "../portfolio/TGH/2020_v7_cleanA.doc",
-    "modalTitle": "Design Project",
-    "modalDesc": "Detailed design"
+    "media": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg",
+    "modalTitle": "New Team Member Onboarding",
+    "modalDesc": "<a href='../portfolio/TGH/2020_v7_cleanA.doc'>Click here to download.</a>"
   },
+
+  {
+    "id": "hsnOnboarding",
+    "title": "Home Shopping Network Onboarding",
+    "description": "Single-project contract for HSN. Screen recording, not interactive.",
+    "tags": ["Storyline", "Powerpoint"],
+    "thumb": "../portfolio/thumbs/hsn-thumb.jpg",
+    "media": "<iframe src='https://youtu.be/xOKxv0yBbF8' allowfullscreen></iframe>",
+    "modalTitle": "Home Shopping Network Onboarding",
+    "modalDesc": "Single-project contract for HSN. Screen recording, not interactive."
+  },
+
+
+
+
+  {
+    "id": "infectPrevent",
+    "title": "Infection Prevention",
+    "description": "Introductory portion of Infection Prevention section for New Team Member Onboarding.",
+    "tags": ["Storyline"],
+    "thumb": "../portfolio/thumbs/tgh-thumbs/infect-Thumb.jpg",
+    "media": "https://youtu.be/eH-TmSwZhyg",
+    "modalTitle": "Infection Prevention",
+    "modalDesc": "Introductory portion of Infection Prevention section for New Team Member Onboarding."
+  },
+
+
+
+  {
+    "id": "bootcamp-4",
+    "title": "Communication And Healthcare Outcomes",
+    "description": "Interactive</i></b><br>Using Javascript for some truly interactive gamification of soft skills training for healthcare providers.",
+    "tags": ["Storyline", "AfterEffects", "Illustrator", "Javascript"],
+    "thumb": "../portfolio/thumbs/tgh-thumbs/scene2-Thumb.jpg",
+    "media": "../portfolio/SL/Communication-And-Healthcare-Outcomes/story.html",
+    "modalTitle": "Communication And Healthcare Outcomes",
+    "modalDesc": "Interactive</i></b><br>Using Javascript for some truly interactive gamification of soft skills training for healthcare providers."
+  },
+
+  {
+    "id": "familyFeud",
+    "title": "Family Feud Promo",
+    "description": "What I felt was my masterpiece in Vyond at the time.",
+    "tags": ["Vyond", "AfterEffects"],
+    "thumb": "../portfolio/thumbs/tgh-thumbs/familyFeud-Thumb.jpg",
+    "media": "<iframe src='https://youtu.be/0v25MLgysTU'></iframe>",
+    "modalTitle": "Family Feud Promo",
+    "modalDesc": "YouTube embed"
+  },
+
+
+  {
+    "id": "peopleSoft",
+    "title": "Peoplesoft Fundamentals",
+    "description": "Interactive Software simulation including demonstration, explanation, and opportunities for interactive, realistic practice.",
+    "tags": ["Storyline", "PeopleSoft"],
+    "thumb": "../portfolio/thumbs/tgh-thumbs/hcm-Thumb.jpg",
+    "media": "<iframe src='portfolio/SL/PeopleSoft-HCM-Fundamentals/story.html'></iframe>",
+    "modalTitle": "YouTube Video",
+    "modalDesc": "YouTube embed"
+  },
+
   {
     "id": "historyLCE",
     "title": "History of Little Caesars",
-    "description": "For national manager's rally in Las Vegas announcing technology in the stores.",
-    "tags": ["video"],
+    "description": "For national manager's rally in Las Vegas.",
+    "tags": ["Video", "LCE"],
     "thumb": "../portfolio/thumbs/lce/history-thumb.jpg",
     "media": "<iframe src='https://www.youtube.com/watch?v=_ammPSECWiw' allowfullscreen></iframe>",
-    "modalTitle": "YouTube Video",
-    "modalDesc": "YouTube embed"
+    "modalTitle": "History of Little Caesars",
+    "modalDesc": "Announcing technology in the stores"
   },
   {
     "id": "smg-logo",
     "title": "Logo Design",
     "description": "smg example",
-    "tags": ["social"],
-    "thumb": "../portfolio/ph-350x350.png",
-    "media": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/DGxKMBvO99Fofe3-REhkW_5JgNB79Pg4ie6IQE0/'></blockquote>",
-    "modalTitle": "Instagram",
-    "modalDesc": "Instagram embed"
+    "tags": ["Illustration"],
+    "thumb": "../portfolio/thumbs/ill/framedSMG.jpg",
+    "media": "../portfolio/thumbs/ill/framedSMG.jpg",
+    "modalTitle": "SMG Logo",
+    "modalDesc": "Basic. There's also a yummy animated version."
   }
 ]
