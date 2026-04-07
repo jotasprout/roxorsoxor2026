@@ -4,17 +4,17 @@
     "title": "Word Export from Storyline",
     "description": "No voice-over script included, dirty layers",
     "tags": ["design"],
-    "thumb": "../portfolio/ph-350x350.png",
+    "thumb": "<img src='../portfolio/ph-350x350.png'>",
     "media": "<img src='https://via.placeholder.com/800x400'>",
     "modalTitle": "Design Project",
     "modalDesc": "Detailed design"
   },
   {
     "id": "history",
-    "title": "History of Little Caesar's",
+    "title": "History of Little",
     "description": "Video sample",
     "tags": ["video"],
-    "thumb": "https://via.placeholder.com/300x200",
+    "thumb": "<img src='../portfolio/thumbs/history-thumb.jpg'>",
     "media": "<iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ' allowfullscreen></iframe>",
     "modalTitle": "YouTube Video",
     "modalDesc": "YouTube embed"
