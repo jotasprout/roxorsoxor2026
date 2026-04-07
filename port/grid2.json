@@ -1,8 +1,8 @@
 [
   {
-    "id": "design1",
-    "title": "Design Project",
-    "description": "Clean design sample",
+    "id": "ntmov7",
+    "title": "Word Export from Storyline",
+    "description": "No voice-over script included, dirty layers",
     "tags": ["design"],
     "thumb": "../portfolio/ph-350x350.png",
     "media": "<img src='https://via.placeholder.com/800x400'>",
@@ -10,8 +10,8 @@
     "modalDesc": "Detailed design"
   },
   {
-    "id": "video1",
-    "title": "YouTube Video",
+    "id": "history",
+    "title": "History of Little Caesar's",
     "description": "Video sample",
     "tags": ["video"],
     "thumb": "https://via.placeholder.com/300x200",
