@@ -1,31 +1,31 @@
 [
   {
-    "id": "ntmov7",
+    "id": "ntmo_v7",
     "title": "Word Export from Storyline",
     "description": "No voice-over script included, dirty layers",
     "tags": ["storyline"],
-    "thumb": "../portfolio/ph-350x350.png",
-    "media": "<img src='https://via.placeholder.com/800x400'>",
+    "thumb": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg",
+    "media": "../portfolio/TGH/2020_v7_cleanA.doc",
     "modalTitle": "Design Project",
     "modalDesc": "Detailed design"
   },
   {
-    "id": "history",
+    "id": "historyLCE",
     "title": "History of Little Caesars",
-    "description": "Video sample",
+    "description": "For national manager's rally in Las Vegas announcing technology in the stores.",
     "tags": ["video"],
-    "thumb": "../portfolio/thumbs/tgh-thumbs/NTMO-thumb.jpg",
-    "media": "<iframe src='https://youtu.be/_ammPSECWiw' allowfullscreen></iframe>",
+    "thumb": "../portfolio/thumbs/lce/history-thumb.jpg",
+    "media": "<iframe src='https://www.youtube.com/watch?v=_ammPSECWiw' allowfullscreen></iframe>",
     "modalTitle": "YouTube Video",
     "modalDesc": "YouTube embed"
   },
   {
-    "id": "insta1",
-    "title": "Instagram Post",
-    "description": "Instagram example",
+    "id": "smg-logo",
+    "title": "Logo Design",
+    "description": "smg example",
     "tags": ["social"],
-    "thumb": "https://via.placeholder.com/300x200",
-    "media": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/CgZ6Y8zv1yH/'></blockquote>",
+    "thumb": "../portfolio/ph-350x350.png",
+    "media": "<blockquote class='instagram-media' data-instgrm-permalink='https://www.instagram.com/p/DGxKMBvO99Fofe3-REhkW_5JgNB79Pg4ie6IQE0/'></blockquote>",
     "modalTitle": "Instagram",
     "modalDesc": "Instagram embed"
   }
